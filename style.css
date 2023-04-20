@@ -12,6 +12,11 @@
   position: fixed;
   z-index: 2;
 }
+.carrousel button.carrousel__x:hover, .carrousel button.carrousel__ouvrir:hover {
+  font-weight: bolder;
+  background-color: darkturquoise;
+  cursor: pointer;
+}
 
 .carrousel--activer {
   transform: scale(1);
