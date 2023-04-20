@@ -78,7 +78,9 @@
      position = position + 1 // incrémentation de 1
      // position += 1
      // position++
+
      carrousel__form.appendChild(rad)
+     //console.log(carrousel__form.appendChild(rad))
      rad.addEventListener('mousedown', function(){
        console.log(this.dataset.index)
        index = this.dataset.index
@@ -91,11 +93,18 @@
      if (ancien_index != -1){
       // carrousel__figure.children[ancien_index].style.opacity = 0  
       carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer')
+      //carrousel__form.children[ancien_index].checked = false 
      }
      // carrousel__figure.children[index].style.opacity = 1
      carrousel__figure.children[index].classList.add('carrousel__img--activer')
      ancien_index = index
    }
-   
+   /*
+   Permet de vérifier si la classe << carrousel--activer >> se trouve dans la liste des classes carrousel 
+   classlist.contain('carrousel--activer')
+   carrousel.classList.remove('carrousel--activer')
+
+   mdn classList.contain();
+   */
    
    })()
