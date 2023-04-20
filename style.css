@@ -17,6 +17,9 @@
   background-color: darkturquoise;
   cursor: pointer;
 }
+.carrousel figure.carrousel__figure > img {
+  position: fixed;
+}
 
 .carrousel--activer {
   transform: scale(1);
