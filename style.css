@@ -9,8 +9,10 @@
   transition: transform 0.5s;
 }
 .carrousel button.carrousel__x {
-  position: fixed;
-  z-index: 2;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 3;
 }
 .carrousel button.carrousel__x:hover, .carrousel button.carrousel__ouvrir:hover {
   font-weight: bolder;
@@ -23,4 +25,36 @@
 
 .carrousel--activer {
   transform: scale(1);
+}
+
+.carrousel__figure {
+  width: 100%;
+  height: 100%;
+}
+
+.carrousel__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.carrousel__img--activer {
+  opacity: 1;
+}
+
+.carrousel__form {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.carrousel__rad {
+  display: inline-block;
+  margin: 5px;
 }/*# sourceMappingURL=style.css.map */
