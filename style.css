@@ -5,9 +5,12 @@
   top: 25%;
   left: 25%;
   border: 1px solid #444;
-  background-color: aquamarine;
   transform: scale(0);
   transition: transform 0.5s;
+}
+.carrousel button.carrousel__x {
+  position: fixed;
+  z-index: 2;
 }
 
 .carrousel--activer {

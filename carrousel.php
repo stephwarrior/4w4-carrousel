@@ -34,7 +34,7 @@ wp_enqueue_scripts // le hook qui permettra d'enfiler le css et le script
                 plugin_dir_url(__FILE__) . 'js/carrousel.js',
                 array(),
                 $version_js,
-                true
+                true // ajoute le script carrousel.js à la fin de la page
         );
     
     }
