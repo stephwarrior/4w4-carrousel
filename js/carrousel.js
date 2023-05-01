@@ -41,13 +41,23 @@
       index = 0;
     }
     afficher_image(index);
-    carrousel__form.children[index].checked = true; //pour garder bouton radio de l'image actuelle coché 
+    carrousel__form.children[index].checked = true; //pour garder bouton radio de l'image actuelle coché
 
-   // console.log("test!");
+    // console.log("test!");
   });
 
+  ////BOUTON PRÉCÉDENT//////
+  btnPrec.addEventListener("click", function () {
+    if (index < 0) {
+      index = galerie__img.length--;
+    }
+    index--;//Diminuer valeur index
+    afficher_image(index);
+    carrousel__form.children[index].checked = true;
 
-
+    //console.log("bouton précédent!");
+    //console.log(index);
+  });
 
   /**
    * ajouter_img_dans_carrousel
@@ -101,6 +111,10 @@
   }
 
   function afficher_image(index) {
+   /* if (index < 0) {
+      index = 0;
+    }*/
+
     if (ancien_index != -1) {
       // carrousel__figure.children[ancien_index].style.opacity = 0
       carrousel__figure.children[ancien_index].classList.remove(
