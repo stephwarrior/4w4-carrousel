@@ -16,6 +16,10 @@
    let index = 0
    let ancien_index = -1
    let position = 0 // permet d'indexer les image de la galerie et 
+
+   //controle les boutons interactifs suivant et précédent pour naviguer les images dans le caroussel
+   let btnSuivant = document.querySelector(".suivant")
+   let btnPrec = document.querySelector(".precedent")
    
    /* ----------------------------------------------------  ouvrir boîte modale */
    bouton.addEventListener('mousedown', function(){
@@ -31,6 +35,11 @@
        carrousel.classList.remove('carrousel--activer')
    
    })
+   ////BOUTON SUIVANT
+   btnSuivant.addEventListener('click', function() {
+ 
+    console.log('test!')
+  })
    
    
    
