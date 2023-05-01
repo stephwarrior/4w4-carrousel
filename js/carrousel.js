@@ -41,12 +41,13 @@
       index = 0;
     }
     afficher_image(index);
+    carrousel__form.children[index].checked = true; //pour garder bouton radio de l'image actuelle coché 
 
    // console.log("test!");
   });
 
 
-  
+
 
   /**
    * ajouter_img_dans_carrousel
