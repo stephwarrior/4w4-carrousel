@@ -22,6 +22,7 @@
        console.log('ouvrir la boîte modale')
        carrousel.classList.add('carrousel--activer')
        ajouter_img_dans_carrousel()
+       afficher_image(index)
    
    })
    /* ----------------------------------------------------  fermer boîte modale */
