@@ -23,17 +23,22 @@
 
   /* ----------------------------------------------------  ouvrir boîte modale */
   bouton.addEventListener("mousedown", function () {
-    console.log("ouvrir la boîte modale");
-    carrousel.classList.add("carrousel--activer");
-    ajouter_img_dans_carrousel();
-    afficher_image(index);
+    if (carrousel__form.querySelectorAll(".carrousel__rad").length === 0) {
+      carrousel.classList.add("carrousel--activer");
+      ajouter_img_dans_carrousel();
+      afficher_image(index);
+    } else {
+      carrousel.classList.add("carrousel--activer");
+      afficher_image(index);
+    }
   });
+
   /* ----------------------------------------------------  fermer boîte modale */
   carrousel__x.addEventListener("mousedown", function () {
     console.log("fermer la boîte modale");
     carrousel.classList.remove("carrousel--activer");
   });
-  ////BOUTON SUIVANT/////
+  //-----------------------------------------------------BOUTON SUIVANT/////
   btnSuivant.addEventListener("click", function () {
     index++; //incrémenter l'index
     //pour retourner a l'index initial lorsqu'on a parcouru toute la galerie
@@ -46,12 +51,12 @@
     // console.log("test!");
   });
 
-  ////BOUTON PRÉCÉDENT//////
+  //-----------------------------------------------------BOUTON PRÉCÉDENT//////
   btnPrec.addEventListener("click", function () {
     if (index < 0) {
       index = galerie__img.length--;
     }
-    index--;//Diminuer valeur index
+    index--; //Diminuer valeur index
     afficher_image(index);
     carrousel__form.children[index].checked = true;
 
@@ -111,7 +116,7 @@
   }
 
   function afficher_image(index) {
-   /* if (index < 0) {
+    /* if (index < 0) {
       index = 0;
     }*/
 
