@@ -1,6 +1,5 @@
 (function () {
   console.log("Début du carrousel");
-  let ouvreGalerie = document.querySelector(".blocflex__galerie figure");
   /* -------------------------------------------------------- Variable du carrousel */
   let carrousel = document.querySelector(".carrousel");
   let carrousel__x = document.querySelector(".carrousel__x");
@@ -31,6 +30,7 @@
         index = e.target.dataset.index;
         afficher_image(index);
         carrousel.classList.add("carrousel--activer");
+        carrousel__form.children[index].checked = true;
         //console.log(index);
       });
 
