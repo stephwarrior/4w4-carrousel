@@ -32,6 +32,13 @@
   z-index: 1;
 }
 
+.btnPrecSuiv button, .carrousel__x {
+  padding: 1rem;
+  color: #4bb8e5;
+  background-color: black;
+  border: 1px solid;
+}
+
 .carrousel--activer {
   transform: scale(1);
 }
