@@ -1,16 +1,3 @@
-.carrousel__ouvrir {
-  background-color: black;
-  color: #4bb8e5;
-  background-color: black;
-  border: 1px solid;
-}
-
-button.carrousel__ouvrir:hover {
-  font-weight: bolder;
-  filter: brightness(1.3);
-  cursor: pointer;
-}
-
 .carrousel {
   position: fixed;
   width: 50%;

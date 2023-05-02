@@ -1,6 +1,6 @@
 (function () {
   console.log("Début du carrousel");
-  let bouton = document.querySelector(".carrousel__ouvrir");
+  let ouvreGalerie = document.querySelector(".blocflex__galerie figure");
   /* -------------------------------------------------------- Variable du carrousel */
   let carrousel = document.querySelector(".carrousel");
   let carrousel__x = document.querySelector(".carrousel__x");
@@ -22,15 +22,15 @@
   let btnPrec = document.querySelector(".precedent");
 
   /* ----------------------------------------------------  ouvrir boîte modale */
-  bouton.addEventListener("mousedown", function () {
+  ouvreGalerie.addEventListener("mousedown", function () {
     if (carrousel__form.querySelectorAll(".carrousel__rad").length === 0) {
       carrousel.classList.add("carrousel--activer");
       ajouter_img_dans_carrousel();
       afficher_image(index);
-    } else {
+    }
       carrousel.classList.add("carrousel--activer");
       afficher_image(index);
-    }
+  
   });
 
   /* ----------------------------------------------------  fermer boîte modale */
