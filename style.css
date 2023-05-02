@@ -5,6 +5,12 @@
   border: 1px solid;
 }
 
+button.carrousel__ouvrir:hover {
+  font-weight: bolder;
+  filter: brightness(1.3);
+  cursor: pointer;
+}
+
 .carrousel {
   position: fixed;
   width: 50%;
@@ -21,26 +27,25 @@
   right: 5px;
   z-index: 3;
 }
-.carrousel button.carrousel__x:hover,
-.carrousel button.carrousel__ouvrir:hover {
+.carrousel .carrousel__x:hover,
+.carrousel .btnPrecSuiv button:hover {
   font-weight: bolder;
-  background-color: darkturquoise;
+  filter: brightness(1.3);
   cursor: pointer;
 }
 .carrousel figure.carrousel__figure > img {
   position: fixed;
 }
-
-.btnPrecSuiv {
+.carrousel .btnPrecSuiv {
   display: flex;
   justify-content: space-between;
   position: relative;
   top: 50%;
   z-index: 1;
 }
-
-.btnPrecSuiv button, .carrousel__x {
-  padding: 1rem;
+.carrousel .btnPrecSuiv button,
+.carrousel .carrousel__x {
+  padding: 0.7rem;
   color: #4bb8e5;
   background-color: black;
   border: 1px solid;
