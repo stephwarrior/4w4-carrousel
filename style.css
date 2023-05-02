@@ -1,3 +1,10 @@
+.carrousel__ouvrir {
+  background-color: black;
+  color: #4bb8e5;
+  background-color: black;
+  border: 1px solid;
+}
+
 .carrousel {
   position: fixed;
   width: 50%;
