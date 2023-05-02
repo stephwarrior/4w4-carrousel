@@ -21,17 +21,22 @@
   let btnSuivant = document.querySelector(".suivant");
   let btnPrec = document.querySelector(".precedent");
 
-  /* ----------------------------------------------------  ouvrir boîte modale */
-  ouvreGalerie.addEventListener("mousedown", function () {
-    if (carrousel__form.querySelectorAll(".carrousel__rad").length === 0) {
-      carrousel.classList.add("carrousel--activer");
-      ajouter_img_dans_carrousel();
-      afficher_image(index);
+
+  /**
+   * Boucle s'execute une seule fois quand carrousel.js est initialisé
+   */
+    for (const elm of galerie__img) {
+      elm.dataset.index = position;
+      elm.addEventListener("mousedown", function (e) {
+        index = e.target.dataset.index;
+        afficher_image(index);
+        carrousel.classList.add("carrousel--activer");
+        //console.log(index);
+      });
+
+      creation_img_carrousel(elm);
+      creation_radio_carrousel();
     }
-      carrousel.classList.add("carrousel--activer");
-      afficher_image(index);
-  
-  });
 
   /* ----------------------------------------------------  fermer boîte modale */
   carrousel__x.addEventListener("mousedown", function () {
@@ -53,10 +58,11 @@
 
   //-----------------------------------------------------BOUTON PRÉCÉDENT//////
   btnPrec.addEventListener("click", function () {
-    if (index < 0) {
-      index = galerie__img.length--;
-    }
+
     index--; //Diminuer valeur index
+        if (index < 0) {
+      index = galerie__img.length-1;
+    }
     afficher_image(index);
     carrousel__form.children[index].checked = true;
 
@@ -68,19 +74,7 @@
    * ajouter_img_dans_carrousel
    * Ajouter l'ensemble des images de la galerie dans la boîte modale carrousel
    */
-  function ajouter_img_dans_carrousel() {
-    for (const elm of galerie__img) {
-      elm.dataset.index = position;
-      elm.addEventListener("mousedown", function () {
-        index = this.dataset.index;
-        afficher_image(index);
-        console.log(index);
-      });
-
-      creation_img_carrousel(elm);
-      creation_radio_carrousel();
-    }
-  }
+  
 
   function creation_img_carrousel(elm) {
     //console.log(elm.getAttribute('src'))
@@ -116,10 +110,6 @@
   }
 
   function afficher_image(index) {
-    /* if (index < 0) {
-      index = 0;
-    }*/
-
     if (ancien_index != -1) {
       // carrousel__figure.children[ancien_index].style.opacity = 0
       carrousel__figure.children[ancien_index].classList.remove(
